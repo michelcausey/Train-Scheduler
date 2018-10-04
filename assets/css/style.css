@@ -1,0 +1,12 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+.jumbotron {
+    text-align: center;
+}
