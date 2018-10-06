@@ -15,7 +15,7 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-$("submit").on("click", function (event) {
+$("#add-train-button").on("click", function (event) {
   event.preventDefault();
 
   // Grabs user input
@@ -67,7 +67,7 @@ database.ref().on("child_added", function (childSnapshot) {
 
   // Current Time
   var currentTime = moment();
-  console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+  console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
 
   // Difference between the times
   var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
@@ -83,7 +83,7 @@ database.ref().on("child_added", function (childSnapshot) {
 
   // Next Train
   var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-  console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+  console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
 
   // Create the new row
   var newRow = $("<tr>").append(
@@ -91,7 +91,7 @@ database.ref().on("child_added", function (childSnapshot) {
     $("<td>").text(trainDest),
     $("<td>").text(frequency),
     $("<td>").text(firstDeparture),
-    $("<td>").text(moment(nextTrain).format("hh:mm")),
+    $("<td>").text(moment(nextTrain).format("HH:mm")),
     $("<td>").text(tMinutesTillTrain)
   );
 
