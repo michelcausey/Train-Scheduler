@@ -1,12 +1,28 @@
-body {
-    font-family: 'Raleway', sans-serif;
+@font-face {
+    font-family: "faster";
+    src: url("/assets/images/FasterOne-Regular.ttf")
+    format("truetype");
 }
 
 h1 {
-    font-family: 'Roboto Slab', serif;
     text-align: center;
+
 }
 
 .jumbotron {
+    background-color: #69f0ae;
     text-align: center;
+    margin-top: 20px;
+    font-family: "faster";
+    font-weight: bold;
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#form {
+    background-color: #69f0ae;
+    padding: 20px;
 }
