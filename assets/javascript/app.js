@@ -16,19 +16,20 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 $("#add-train-button").on("click", function (event) {
+  console.log("click add train")
   event.preventDefault();
 
   // Grabs user input
   var trainName = $("#train-name-input").val().trim();
   var trainDest = $("#destination-input").val().trim();
-  var firstDeparture = $("#first-train-input").val().trim();
+  var firstDeparture = $("#departure-time-input").val().trim();
   var frequency = $("#frequency-input").val().trim();
 
   // Creates local "temporary" object for holding employee data
   var addTrain = {
     name: trainName,
     destination: trainDest,
-    firstDeparture: firstDeparture,
+    start: firstDeparture,
     frequency: frequency,
   };
 
